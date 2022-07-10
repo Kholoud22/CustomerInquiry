@@ -5,11 +5,11 @@
 - set CustomerSupport.sln to be your startup project then click ctrl+f5 to build it
 - The Project has UnitTesting using XUnit we can run test from Test tab in visual studio 
 
-**Note
+**Note**
 - please make sure the IDE you use is visual studio 2022
 - please make sure it's running on "http://localhost:5115/" as that's the baseURL for frontend
 
-**Includes
+**Includes**
 - IoC / DI
 - In-Memory Caching
 - Testing
@@ -25,7 +25,7 @@
 **Note**
 - please make sure the target in proxy.config.json is matching backend endpoint 
 
-**Includes
+**Includes**
 - Error handler interceptor
 - Responsive used bootstrap 
 
