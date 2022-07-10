@@ -30,6 +30,6 @@
 - Responsive used bootstrap 
 
 ## To Enhance
-- I think the project is small and 2 layers (API, Application) will be enough but we could add Infrastructure Layer (In-Memory Caching instead of Application Layer) and common layer (to register services in it instead of Application Layer).
+- I think the project is small and 2 layers (API, Application) will be enough but we could add Infrastructure Layer (Caching to be in it instead of Application Layer) and common layer (to register services in it instead of Application Layer).
 - we could add more components in FE like Error component and success component and enhance the UI to be look nicer.
 
