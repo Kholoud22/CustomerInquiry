@@ -1,0 +1,97 @@
+<div class="container page-container">
+    <form class="container pt-3" [formGroup]="customerInfoForm" (ngSubmit)="onSubmit()">
+
+        <div class="row form-group pb-2">
+            <div class="col-md-6 col-sm-12">
+                <div class="form-group row pb-2">
+                    <div class="col-12 large-black-label">
+                        <label>Email:</label>
+                    </div>
+                    <div class="col-12">
+                        <input class="form-control medium-black-label" placeholder="Email" formControlName="email" type="text">
+                    </div>
+                </div>
+                <div *ngIf="submitted && f['email']?.errors" class="alert alert-danger mt-2">
+                    email is required.
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 pb-sm-2">
+                <div class="col-12 large-black-label">
+                    <label>Phone:</label>
+                </div>
+                <div class="col-12">
+                    <input class="form-control medium-black-label" placeholder="Phone" formControlName="phone" type="text">
+                </div>
+                <div *ngIf="submitted && f['phone']?.errors" class="alert alert-danger mt-2">
+                    phone is required.
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="row form-group pb-2">
+            <div class="col-md-6 col-sm-12 pb-sm-2">
+                <div class="row form-group pb-2">
+                    <div class="col-12 large-black-label">
+                        <label>Type of inquiry:</label>
+                    </div>
+                    <div class="col-12">
+                        <select class="form-select medium-black-label" (change)="changeInquiry($event)" formControlName="inquiry">
+                            <option value="">Choose inquiry</option>
+                            <option *ngFor="let inquiry of InquiryTypes" [value]="inquiry.value">
+                             {{ inquiry.description }}
+                            </option>
+                         </select>
+                    </div>
+                    
+                </div>
+                <div *ngIf="submitted && f['inquiry']?.errors" class="alert alert-danger mt-2">
+                    inquiry is required.
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="row form-group pb-2">
+                    <div class="col-12 large-black-label">
+                        <label>Number:</label>
+                    </div>
+                    <div class="col-12">
+                        <input class="form-control medium-black-label" placeholder="Number" formControlName="number" type="text">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="row form-group pb-2">
+            <div class="col-12 large-black-label">
+                <label>Description:</label>
+            </div>
+            <div class="col-12">
+                <textarea class="form-control medium-black-label" placeholder="Description" formControlName="description"></textarea>
+            </div>
+        </div>
+        <div *ngIf="submitted && f['description']?.errors" class="alert alert-danger">
+            description is required.
+        </div>
+
+        <div class="row form-group pb-2">
+            <div class="col-auto pl-0">
+                <input placeholder="Accept terms" class="form-check" formControlName="TC" type="checkbox">
+            </div>
+            <div class="col-auto p-md-0 large-black-label">
+                <label>Terms and Conditions</label>
+            </div>
+
+        </div>
+        <div *ngIf="submitted && f['TC']?.errors" class="alert alert-danger">
+            accept terms and conditions.
+        </div>
+
+        <div class="row m-auto pb-2">
+            <button type="submit" class="btn btn-primary col-md-auto col-sm-12 m-auto">
+                Submit
+            </button>
+        </div>
+          
+    </form>
+  </div>
