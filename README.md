@@ -2,7 +2,7 @@
 
 ## Backend Project
 - Inside backend/CustomerSupport folder
-- set CustomerSupport.sln to be your startup project then click ctrl+f5 to build it
+- set CustomerSupport.sln to be your startup project then run (ctrl+f5)
 - The Project has UnitTesting using XUnit we can run test from Test tab in visual studio 
 
 **Note**
@@ -26,6 +26,7 @@
 - please make sure the target in proxy.config.json is matching backend endpoint 
 
 **Includes**
+- It's angular project 
 - Error handler interceptor
 - Responsive used bootstrap 
 
